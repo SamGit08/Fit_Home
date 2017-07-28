@@ -1,0 +1,136 @@
+//paramètres généraux
+body{
+  background-image: url("../images/mainfit.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1{
+  text-align: center;
+  font-family: "Droit Sans", sans-serif;
+  font-weight: bold;
+}
+
+.bouton{
+  border: solid black 2px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  font-family: "Droit Sans", sans-serif;
+  font-weight: bold;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+//header
+#section1{
+  height: 100vh;
+  background: linear-gradient(to right, rgba(240, 152, 25, 0.8), rgba(171, 255, 147, 0.8));
+  p{
+    text-align: center;
+    font-family: "Droit Sans", sans-serif;
+  }
+}
+// media query section1
+@media screen and (min-width:320px) and (max-width:767px){
+  header{
+    #connexion{
+      margin-top: 12px;
+      font-size: 14px;
+      width: 105px;
+      height: 30px;
+    }
+    .logo{
+      width: 45px;
+      height: 45px;
+      margin-top: 3px;
+    }
+  }
+  #inscription{
+    margin-top: 12px;
+    font-size: 17px;
+    width: 130px;
+    height: 30px;
+    position: relative;
+    top: 125px;
+  }
+  p{
+    position: relative;
+    top: 115px;
+  }
+  h1{
+    position: relative;
+    top: 100px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1279px){
+  header{
+    #connexion{
+      margin-top: 25px;
+      font-size: 18px;
+      width: 150px;
+      height: 45px;
+    }
+    .logo{
+      width: 85px;
+      height: 85px;
+      margin-top: 3px;
+    }
+  }
+  #inscription{
+    margin-top: 12px;
+    font-size: 35px;
+    width: 365px;
+    height: 55px;
+    position: relative;
+    top: 270px;
+  }
+  p{
+    position: relative;
+    top: 250px;
+    font-size: 30px;
+  }
+  h1{
+    position: relative;
+    top: 245px;
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width:1280px){
+  header{
+    #connexion{
+      margin-top: 25px;
+      font-size: 20px;
+      width: 180px;
+      height: 48px;
+    }
+    .logo{
+      width: 110px;
+      height: 110px;
+    }
+  }
+  #inscription{
+    margin-top: 12px;
+    font-size: 35px;
+    width: 365px;
+    height: 55px;
+    position: relative;
+    top: 115px;
+  }
+  p{
+    position: relative;
+    top: 90px;
+    font-size: 30px;
+  }
+  h1{
+    position: relative;
+    top: 95px;
+    font-size: 70px;
+  }
+}
