@@ -27,10 +27,86 @@
         </div>
         <div class="col-xs-10 col-xs-offset-1">
           <p>La salle de fitness chez vous !</p>
+          <span>100% gratuit !</span>
         </div>
         <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
           <button id="inscription" class="bouton" type="button" name="button">Inscription</button>
         </div>
+      </div>
+    </div>
+    <div id="section2" class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Pour vous</h2>
+        </div>
+        <!-- 1ere fonction -->
+        <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12">
+            <img class="icone" src="images/house.png" alt="">
+          </div>
+          <div class="col-xs-12">
+            <span>Séances à domicile</span>
+          </div>
+          <div class="col-xs-12">
+            <p>Effectuer votre entraînement libre chez vous sans materiel</p>
+          </div>
+        </div>
+        <!-- fin de la fonction -->
+        <!-- 2eme fonction -->
+        <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12">
+            <img class="icone" src="images/list.png" alt="">
+          </div>
+          <div class="col-xs-12">
+            <span>Programme nutritionnel</span>
+          </div>
+          <div class="col-xs-12">
+            <p>Suiver un programme nutritionnel soumis par des coachs</p>
+          </div>
+        </div>
+        <!-- fin de la fonction -->
+        <!-- 3eme fonction -->
+        <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12">
+            <img class="icone" src="images/list_sport.png" alt="">
+          </div>
+          <div class="col-xs-12">
+            <span>Programme sportif</span>
+          </div>
+          <div class="col-xs-12">
+            <p>Suiver un programme sportif adapté à l'évolution voulu</p>
+          </div>
+        </div>
+        <!-- fin de la fonction -->
+        <!-- 4eme fonction -->
+        <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12">
+            <img class="icone" src="images/graph.png" alt="">
+          </div>
+          <div class="col-xs-12">
+            <span>Suivi sportif</span>
+          </div>
+          <div class="col-xs-12">
+            <p>Consulter votre progression</p>
+          </div>
+        </div>
+        <!-- fin de la fonction -->
+          <div class="col-xs-12">
+            <h2>Le plus coach</h2>
+          </div>
+          <!-- 1ere fonction -->
+          <div class="col-xs-12">
+            <div class="col-xs-12">
+              <img class="icone" src="images/list_prog.png" alt="">
+            </div>
+            <div class="col-xs-12">
+              <span>Création de programmes</span>
+            </div>
+            <div class="col-xs-12">
+              <p>Créer vos programmes sportifs et nutritionnels pour la communauté</p>
+            </div>
+          </div>
+          <!-- fin de la fonction -->
       </div>
     </div>
   </body>

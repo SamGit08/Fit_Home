@@ -6,15 +6,23 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 div{
   text-align: center;
 }
+
 h1{
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-weight: bold;
 }
 
+h2{
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
 .bouton{
   border: solid black 2px;
   background-color: rgba(0, 0, 0, 0);
@@ -27,7 +35,9 @@ h1{
   width: 50px;
   height: 50px;
 }
-
+span{
+  font-family: 'Oswald', sans-serif;
+}
 //section 1
 #section1{
   height: 100vh;
@@ -90,13 +100,20 @@ h1{
     position: relative;
     top: 125px;
   }
-  p{
-    position: relative;
-    top: 115px;
-  }
   h1{
     position: relative;
     top: 100px;
+  }
+  #section1{
+    p{
+      position: relative;
+      top: 115px;
+    }
+    span{
+      position: relative;
+      top: 190px;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -122,15 +139,23 @@ h1{
     position: relative;
     top: 270px;
   }
-  p{
-    position: relative;
-    top: 250px;
-    font-size: 30px;
-  }
   h1{
     position: relative;
     top: 245px;
     font-size: 80px;
+  }
+  #section1{
+    p{
+      position: relative;
+      top: 250px;
+      font-size: 30px;
+    }
+    span{
+      font-size: 25px;
+      position: relative;
+      top: 380px;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -155,16 +180,92 @@ h1{
     position: relative;
     top: 115px;
   }
-  p{
-    position: relative;
-    top: 90px;
-    font-size: 30px;
-  }
   h1{
     position: relative;
     top: 95px;
     font-size: 70px;
   }
+  #section1{
+    p{
+      position: relative;
+      top: 90px;
+      font-size: 30px;
+    }
+    span{
+      font-size: 25px;
+      position: relative;
+      top: 245px;
+      text-decoration: underline;
+    }
+  }
 }
 
 //section 2
+#section2{
+  background-color: white;
+}
+// media query section 2
+@media screen and (min-width:320px) and (max-width:767px){
+  h2{
+    font-size: 30px;
+  }
+  #section2{
+    .icone{
+      width: 50px;
+      height: 50px;
+    }
+    span{
+      font-family: 'Oswald', sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    p{
+      font-family: 'Oswald', sans-serif;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1279px){
+  h2{
+    font-size: 40px;
+  }
+  #section2{
+    .icone{
+      width: 70px;
+      height: 70px;
+    }
+    span{
+      font-family: 'Oswald', sans-serif;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    p{
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width:1280px){
+  h2{
+    font-size: 50px;
+  }
+  #section2{
+    .icone{
+      width: 150px;
+      height: 150px;
+    }
+    span{
+      font-family: 'Oswald', sans-serif;
+      font-weight: bold;
+      font-size: 35px;
+    }
+    p{
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      margin-bottom: 55px;
+    }
+  }
+}
