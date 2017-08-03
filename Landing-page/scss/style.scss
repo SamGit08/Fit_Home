@@ -269,3 +269,69 @@ span{
     }
   }
 }
+
+// footer
+.contacts{
+  background-color: black;
+  height: 100px;
+  span{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+  }
+}
+.contacts:hover{
+  background-color:  #404040;
+  cursor: pointer;
+}
+
+// media query footer
+@media screen and (min-width:320px) and (max-width:767px){
+  .contacts{
+    padding-top: 35px;
+    span{
+      font-size: 20px;
+    }
+  }
+  footer .contacts:nth-last-child(3){
+    padding-top: 20px;
+  }
+  .social_logo{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1279px){
+  .contacts{
+    padding-top: 40px;
+    span{
+      font-size: 20px;
+    }
+  }
+  footer .contacts:nth-last-child(3){
+    padding-top: 20px;
+  }
+  .social_logo{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width:1280px){
+  .contacts{
+    padding-top: 40px;
+    span{
+      font-size: 20px;
+    }
+  }
+  footer .contacts:nth-last-child(3){
+    padding-top: 20px;
+  }
+  .social_logo{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+  }
+}
