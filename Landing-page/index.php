@@ -109,5 +109,32 @@
           <!-- fin de la fonction -->
       </div>
     </div>
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="contacts col-xs-12 col-sm-6 col-md-3">
+          <span>Contacts</span>
+        </div>
+        <div class="contacts col-xs-12 col-sm-6 col-md-3">
+          <div class="col-xs-12">
+            <span>@Fithome</span>
+          </div>
+          <div class="col-xs-2 col-xs-offset-3">
+            <img class="social_logo" src="images/facebook.png" alt="">
+          </div>
+          <div class="col-xs-2">
+            <img class="social_logo" src="images/twitter.png" alt="">
+          </div>
+          <div class="col-xs-2">
+            <img class="social_logo" src="images/instagram.png" alt="">
+          </div>
+        </div>
+        <div class="contacts col-xs-12 col-sm-6 col-md-3">
+          <span>Conditions générales</span>
+        </div>
+        <div class="contacts col-xs-12 col-sm-6 col-md-3">
+          <span>Aide</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
