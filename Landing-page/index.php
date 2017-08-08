@@ -4,12 +4,18 @@
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Oswald" rel="stylesheet">
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <title>Fit'Home - Vos séances à domicile</title>
   </head>
   <body>
+    <div id="modal" class="container-fluid">
+      <div class="row">
+        <?php require 'modal_form.php'; ?>
+      </div>
+    </div>
     <div id="section1" class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
@@ -18,7 +24,7 @@
               <img class="logo" src="images/weights.png" alt="">
             </div>
             <div class="col-xs-2 col-xs-offset-5 col-sm-2 col-sm-offset-7 col-md-2 col-md-offset-8">
-              <button id="connexion" class="bouton" type="button" name="button">Connexion</button>
+              <button id="connexion" onclick='connexion();' class="bouton" type="button" name="button">Se connecter</button>
             </div>
           </header>
         </div>
@@ -30,7 +36,7 @@
           <span>100% gratuit !</span>
         </div>
         <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
-          <button id="inscription" class="bouton" type="button" name="button">Inscription</button>
+          <button id="inscription" onclick="inscription();" class="bouton" type="button" name="button">S'inscrire</button>
         </div>
       </div>
     </div>
@@ -137,4 +143,5 @@
       </div>
     </footer>
   </body>
+  <script src="js/app.js" type="text/javascript"></script>
 </html>

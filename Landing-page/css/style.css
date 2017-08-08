@@ -33,6 +33,30 @@ h2 {
 span {
   font-family: 'Oswald', sans-serif; }
 
+#modal {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100vh;
+  width: 100%; }
+
+.index {
+  z-index: 10; }
+
+.none {
+  display: none; }
+
+.formulaire {
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: 'Oswald', sans-serif; }
+
+input {
+  border: 2px solid black;
+  border-radius: 5px; }
+
 #section1 {
   height: 100vh;
   background-size: 400% 400%;
@@ -240,7 +264,7 @@ span {
     margin-top: 10px; } }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .contacts {
-    padding-top: 40px; }
+    padding-top: 30px; }
     .contacts span {
       font-size: 25px; }
 
@@ -264,5 +288,145 @@ span {
     width: 20px;
     height: 20px;
     margin-top: 10px; } }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  #formConnexion {
+    margin-top: 150px; }
+    #formConnexion .bouton {
+      height: 30px;
+      margin-bottom: 10px; }
+
+  label {
+    font-size: 15px;
+    margin-top: 5px; }
+
+  input {
+    width: 200px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    height: 35px; }
+
+  .close {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    position: absolute;
+    top: -9px; } }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  #formConnexion {
+    margin-top: 320px; }
+    #formConnexion .bouton {
+      height: 45px;
+      margin-bottom: 10px;
+      font-size: 20px; }
+
+  label {
+    font-size: 25px;
+    margin-top: 5px; }
+
+  input {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    height: 50px;
+    font-size: 23px; }
+
+  .close {
+    font-family: 'Oswald', sans-serif;
+    font-size: 55px;
+    position: absolute;
+    top: -17px;
+    right: -12px; } }
+@media screen and (min-width: 1280px) {
+  #formConnexion {
+    margin-top: 220px; }
+    #formConnexion .bouton {
+      height: 45px;
+      margin-bottom: 10px;
+      font-size: 20px; }
+
+  label {
+    font-size: 30px;
+    margin-top: 5px; }
+
+  input {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    height: 50px;
+    font-size: 23px; }
+
+  .close {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    position: absolute;
+    top: -17px;
+    right: -12px; } }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  #formInscription {
+    margin-top: 85px; }
+    #formInscription .bouton {
+      height: 30px;
+      margin-bottom: 10px; }
+
+  label {
+    font-size: 15px;
+    margin-top: 5px; }
+
+  input {
+    width: 200px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    height: 35px; }
+
+  .close {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    position: absolute;
+    top: -9px; } }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  #formInscription {
+    margin-top: 240px; }
+    #formInscription .bouton {
+      height: 45px;
+      margin-bottom: 10px;
+      font-size: 20px; }
+
+  label {
+    font-size: 25px;
+    margin-top: 5px; }
+
+  input {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    height: 50px;
+    font-size: 23px; }
+
+  .close {
+    font-family: 'Oswald', sans-serif;
+    font-size: 55px;
+    position: absolute;
+    top: -17px;
+    right: -12px; } }
+@media screen and (min-width: 1280px) {
+  #formInscription {
+    margin-top: 100px; }
+    #formInscription .bouton {
+      height: 45px;
+      margin-bottom: 10px;
+      font-size: 20px; }
+
+  label {
+    font-size: 30px;
+    margin-top: 5px; }
+
+  input {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    height: 50px;
+    font-size: 23px; }
+
+  .close {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    position: absolute;
+    top: -17px;
+    right: -12px; } }
 
 /*# sourceMappingURL=style.css.map */
