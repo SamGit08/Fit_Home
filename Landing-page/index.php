@@ -13,34 +13,26 @@
   <body>
     <div id="modal" class="container-fluid">
       <div class="row">
-        <?php require 'modal_form.php'; ?>
+        <?php
+          require 'modal_form.php';
+        ?>
       </div>
     </div>
-    <div id="section1" class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12">
-          <header>
-            <div class="col-xs-2">
-              <img class="logo" src="images/weights.png" alt="">
-            </div>
-            <div class="col-xs-2 col-xs-offset-5 col-sm-2 col-sm-offset-7 col-md-2 col-md-offset-8">
-              <button id="connexion" onclick='connexion();' class="bouton" type="button" name="button">Se connecter</button>
-            </div>
-          </header>
-        </div>
-        <div class="col-xs-12">
-          <h1>Fit'Home</h1>
-        </div>
-        <div class="col-xs-10 col-xs-offset-1">
+    <section>
+      <header>
+        <img class="logo" src="images/weights.png" alt="">
+        <button id="connexion" onclick='connexion();' class="bouton" type="button" name="button">Se connecter</button>
+      </header>
+      <div>
+        <h1>Fit'Home</h1>
+        <div>
           <p>La salle de fitness chez vous !</p>
           <span>100% gratuit !</span>
         </div>
-        <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
-          <button id="inscription" onclick="inscription();" class="bouton" type="button" name="button">S'inscrire</button>
-        </div>
+        <button id="inscription" onclick="inscription();" class="bouton" type="button" name="button">S'inscrire</button>
       </div>
-    </div>
-    <div id="section2" class="container-fluid">
+    </section>
+    <main class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
           <h2>Pour vous</h2>
@@ -61,19 +53,6 @@
         <!-- 2eme fonction -->
         <div class="col-xs-12 col-sm-6">
           <div class="col-xs-12">
-            <img class="icone" src="images/list.png" alt="">
-          </div>
-          <div class="col-xs-12">
-            <span>Programme nutritionnel</span>
-          </div>
-          <div class="col-xs-12">
-            <p>Suiver un programme nutritionnel soumis par des coachs</p>
-          </div>
-        </div>
-        <!-- fin de la fonction -->
-        <!-- 3eme fonction -->
-        <div class="col-xs-12 col-sm-6">
-          <div class="col-xs-12">
             <img class="icone" src="images/list_sport.png" alt="">
           </div>
           <div class="col-xs-12">
@@ -81,6 +60,19 @@
           </div>
           <div class="col-xs-12">
             <p>Suiver un programme sportif adapté à l'évolution voulu</p>
+          </div>
+        </div>
+        <!-- fin de la fonction -->
+        <!-- 3eme fonction -->
+        <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-12">
+            <img class="icone" src="images/chat.png" alt="">
+          </div>
+          <div class="col-xs-12">
+            <span>Conseils nutritionnel</span>
+          </div>
+          <div class="col-xs-12">
+            <p>En accompagnement de votre programme sportif</p>
           </div>
         </div>
         <!-- fin de la fonction -->
@@ -114,7 +106,7 @@
           </div>
           <!-- fin de la fonction -->
       </div>
-    </div>
+    </main>
     <footer class="container-fluid">
       <div class="row">
         <div class="contacts col-xs-12 col-sm-6 col-md-3">

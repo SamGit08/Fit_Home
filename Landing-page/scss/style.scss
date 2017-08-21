@@ -7,6 +7,20 @@ body{
   background-attachment: fixed;
 }
 
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+section div:last-child{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 div{
   text-align: center;
 }
@@ -44,12 +58,14 @@ span{
   overflow: hidden;
   top: 0;
   left :0;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.9);
   height: 100vh;
   width: 100%;
 }
 
 .index{
+  display: flex;
   z-index: 10;
 }
 
@@ -68,12 +84,14 @@ input{
   border-radius: 5px;
 }
 
-//section 1
-#section1{
+//section
+section{
   height: 100vh;
   background-size: 400% 400%;
   background: linear-gradient(252deg, rgba(171, 255, 147, 0.8), rgba(240, 152, 25, 0.8), rgba(171, 255, 147, 0.8), rgba(240, 152, 25, 0.8));
   background-size: 400% 400%;
+  display: flex;
+  flex-direction: column;
 
   -webkit-animation: AnimationName 20s ease infinite;
   -moz-animation: AnimationName 20s ease infinite;
@@ -107,7 +125,7 @@ input{
     transition: 0.5s;
   }
 }
-// media query section 1
+// media query section
 @media screen and (min-width:320px) and (max-width:767px){
   header{
     #connexion{
@@ -127,21 +145,10 @@ input{
     font-size: 17px;
     width: 130px;
     height: 30px;
-    position: relative;
-    top: 125px;
   }
-  h1{
-    position: relative;
-    top: 100px;
-  }
-  #section1{
-    p{
-      position: relative;
-      top: 115px;
-    }
+
+  section{
     span{
-      position: relative;
-      top: 190px;
       text-decoration: underline;
     }
   }
@@ -166,24 +173,16 @@ input{
     font-size: 25px;
     width: 185px;
     height: 55px;
-    position: relative;
-    top: 270px;
   }
   h1{
-    position: relative;
-    top: 245px;
     font-size: 80px;
   }
-  #section1{
+  section{
     p{
-      position: relative;
-      top: 250px;
       font-size: 30px;
     }
     span{
       font-size: 25px;
-      position: relative;
-      top: 380px;
       text-decoration: underline;
     }
   }
@@ -193,9 +192,9 @@ input{
   header{
     #connexion{
       margin-top: 25px;
-      font-size: 20px;
-      width: 180px;
-      height: 48px;
+      padding:0 0.65em;
+      font-size: 1.5em;
+      height: 2.5em;
     }
     .logo{
       width: 110px;
@@ -204,42 +203,34 @@ input{
   }
   #inscription{
     margin-top: 12px;
-    font-size: 30px;
-    width: 240px;
-    height: 55px;
-    position: relative;
-    top: 115px;
+    padding:0 0.65em;
+    font-size: 1.5em;
+    height: 2.5em;
   }
   h1{
-    position: relative;
-    top: 95px;
     font-size: 70px;
   }
-  #section1{
+  section{
     p{
-      position: relative;
-      top: 90px;
       font-size: 30px;
     }
     span{
       font-size: 25px;
-      position: relative;
-      top: 245px;
       text-decoration: underline;
     }
   }
 }
 
-//section 2
-#section2{
+//main
+main{
   background-color: white;
 }
-// media query section 2
+// media query main
 @media screen and (min-width:320px) and (max-width:767px){
   h2{
     font-size: 30px;
   }
-  #section2{
+  main{
     .icone{
       width: 50px;
       height: 50px;
@@ -260,7 +251,7 @@ input{
   h2{
     font-size: 40px;
   }
-  #section2{
+  main{
     .icone{
       width: 70px;
       height: 70px;
@@ -282,7 +273,7 @@ input{
   h2{
     font-size: 50px;
   }
-  #section2{
+  main{
     .icone{
       width: 150px;
       height: 150px;
@@ -365,10 +356,10 @@ input{
     margin-top: 10px;
   }
 }
+
 //media query modal
 @media screen and (min-width:320px) and (max-width:767px){
   #formConnexion{
-    margin-top: 150px;
     .bouton{
       height: 30px;
       margin-bottom: 10px;
@@ -394,8 +385,7 @@ input{
 
 @media screen and (min-width:768px) and (max-width:1279px){
   #formConnexion{
-    margin-top: 320px;
-    .bouton{
+      .bouton{
       height: 45px;
       margin-bottom: 10px;
       font-size: 20px;
@@ -422,8 +412,7 @@ input{
 
 @media screen and (min-width:1280px){
   #formConnexion{
-    margin-top: 220px;
-    .bouton{
+      .bouton{
       height: 45px;
       margin-bottom: 10px;
       font-size: 20px;
@@ -450,7 +439,6 @@ input{
 
 @media screen and (min-width:320px) and (max-width:767px){
   #formInscription{
-    margin-top: 85px;
     .bouton{
       height: 30px;
       margin-bottom: 10px;
@@ -472,11 +460,16 @@ input{
     position: absolute;
     top: -9px;
   }
+  select{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 70px;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (min-width:768px) and (max-width:1279px){
   #formInscription{
-    margin-top: 240px;
     .bouton{
       height: 45px;
       margin-bottom: 10px;
@@ -500,12 +493,18 @@ input{
     top: -17px;
     right: -12px;
   }
+  select{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 75px;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width:1280px){
   #formInscription{
-    margin-top: 100px;
-    .bouton{
+  .bouton{
       height: 45px;
       margin-bottom: 10px;
       font-size: 20px;
@@ -527,5 +526,12 @@ input{
     position: absolute;
     top: -17px;
     right: -12px;
+  }
+  select{
+    border: 2px solid black!important;
+    border-radius: 5px!important;
+    width: 75px;
+    margin-bottom: 15px;
+    font-size: 25px;
   }
 }

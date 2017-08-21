@@ -5,6 +5,19 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1em; }
+
+section div:last-child {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+
 div {
   text-align: center; }
 
@@ -38,11 +51,13 @@ span {
   overflow: hidden;
   top: 0;
   left: 0;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.9);
   height: 100vh;
   width: 100%; }
 
 .index {
+  display: flex;
   z-index: 10; }
 
 .none {
@@ -57,11 +72,13 @@ input {
   border: 2px solid black;
   border-radius: 5px; }
 
-#section1 {
+section {
   height: 100vh;
   background-size: 400% 400%;
   background: linear-gradient(252deg, rgba(171, 255, 147, 0.8), rgba(240, 152, 25, 0.8), rgba(171, 255, 147, 0.8), rgba(240, 152, 25, 0.8));
   background-size: 400% 400%;
+  display: flex;
+  flex-direction: column;
   -webkit-animation: AnimationName 20s ease infinite;
   -moz-animation: AnimationName 20s ease infinite;
   animation: AnimationName 20s ease infinite; }
@@ -86,13 +103,13 @@ input {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
-  #section1 p {
+  section p {
     text-align: center;
     font-family: "Oswald", sans-serif; }
-  #section1 #connexion:hover {
+  section #connexion:hover {
     background-color: rgba(171, 255, 147, 0.5);
     transition: 0.5s; }
-  #section1 #inscription:hover {
+  section #inscription:hover {
     background-color: rgba(240, 152, 25, 0.5);
     transition: 0.5s; }
 
@@ -111,20 +128,9 @@ input {
     margin-top: 12px;
     font-size: 17px;
     width: 130px;
-    height: 30px;
-    position: relative;
-    top: 125px; }
+    height: 30px; }
 
-  h1 {
-    position: relative;
-    top: 100px; }
-
-  #section1 p {
-    position: relative;
-    top: 115px; }
-  #section1 span {
-    position: relative;
-    top: 190px;
+  section span {
     text-decoration: underline; } }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   header #connexion {
@@ -141,85 +147,69 @@ input {
     margin-top: 12px;
     font-size: 25px;
     width: 185px;
-    height: 55px;
-    position: relative;
-    top: 270px; }
+    height: 55px; }
 
   h1 {
-    position: relative;
-    top: 245px;
     font-size: 80px; }
 
-  #section1 p {
-    position: relative;
-    top: 250px;
+  section p {
     font-size: 30px; }
-  #section1 span {
+  section span {
     font-size: 25px;
-    position: relative;
-    top: 380px;
     text-decoration: underline; } }
 @media screen and (min-width: 1280px) {
   header #connexion {
     margin-top: 25px;
-    font-size: 20px;
-    width: 180px;
-    height: 48px; }
+    padding: 0 0.65em;
+    font-size: 1.5em;
+    height: 2.5em; }
   header .logo {
     width: 110px;
     height: 110px; }
 
   #inscription {
     margin-top: 12px;
-    font-size: 30px;
-    width: 240px;
-    height: 55px;
-    position: relative;
-    top: 115px; }
+    padding: 0 0.65em;
+    font-size: 1.5em;
+    height: 2.5em; }
 
   h1 {
-    position: relative;
-    top: 95px;
     font-size: 70px; }
 
-  #section1 p {
-    position: relative;
-    top: 90px;
+  section p {
     font-size: 30px; }
-  #section1 span {
+  section span {
     font-size: 25px;
-    position: relative;
-    top: 245px;
     text-decoration: underline; } }
-#section2 {
+main {
   background-color: white; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   h2 {
     font-size: 30px; }
 
-  #section2 .icone {
+  main .icone {
     width: 50px;
     height: 50px; }
-  #section2 span {
+  main span {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 20px; }
-  #section2 p {
+  main p {
     font-family: 'Oswald', sans-serif;
     margin-bottom: 20px; } }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   h2 {
     font-size: 40px; }
 
-  #section2 .icone {
+  main .icone {
     width: 70px;
     height: 70px; }
-  #section2 span {
+  main span {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 25px; }
-  #section2 p {
+  main p {
     font-family: 'Oswald', sans-serif;
     font-size: 15px;
     margin-bottom: 30px; } }
@@ -227,14 +217,14 @@ input {
   h2 {
     font-size: 50px; }
 
-  #section2 .icone {
+  main .icone {
     width: 150px;
     height: 150px; }
-  #section2 span {
+  main span {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 35px; }
-  #section2 p {
+  main p {
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     margin-bottom: 55px; } }
@@ -289,11 +279,9 @@ input {
     height: 20px;
     margin-top: 10px; } }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  #formConnexion {
-    margin-top: 150px; }
-    #formConnexion .bouton {
-      height: 30px;
-      margin-bottom: 10px; }
+  #formConnexion .bouton {
+    height: 30px;
+    margin-bottom: 10px; }
 
   label {
     font-size: 15px;
@@ -311,12 +299,10 @@ input {
     position: absolute;
     top: -9px; } }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  #formConnexion {
-    margin-top: 320px; }
-    #formConnexion .bouton {
-      height: 45px;
-      margin-bottom: 10px;
-      font-size: 20px; }
+  #formConnexion .bouton {
+    height: 45px;
+    margin-bottom: 10px;
+    font-size: 20px; }
 
   label {
     font-size: 25px;
@@ -335,12 +321,10 @@ input {
     top: -17px;
     right: -12px; } }
 @media screen and (min-width: 1280px) {
-  #formConnexion {
-    margin-top: 220px; }
-    #formConnexion .bouton {
-      height: 45px;
-      margin-bottom: 10px;
-      font-size: 20px; }
+  #formConnexion .bouton {
+    height: 45px;
+    margin-bottom: 10px;
+    font-size: 20px; }
 
   label {
     font-size: 30px;
@@ -359,11 +343,9 @@ input {
     top: -17px;
     right: -12px; } }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  #formInscription {
-    margin-top: 85px; }
-    #formInscription .bouton {
-      height: 30px;
-      margin-bottom: 10px; }
+  #formInscription .bouton {
+    height: 30px;
+    margin-bottom: 10px; }
 
   label {
     font-size: 15px;
@@ -379,14 +361,18 @@ input {
     font-family: 'Oswald', sans-serif;
     font-size: 40px;
     position: absolute;
-    top: -9px; } }
+    top: -9px; }
+
+  select {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 70px;
+    margin-bottom: 10px; } }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  #formInscription {
-    margin-top: 240px; }
-    #formInscription .bouton {
-      height: 45px;
-      margin-bottom: 10px;
-      font-size: 20px; }
+  #formInscription .bouton {
+    height: 45px;
+    margin-bottom: 10px;
+    font-size: 20px; }
 
   label {
     font-size: 25px;
@@ -403,14 +389,19 @@ input {
     font-size: 55px;
     position: absolute;
     top: -17px;
-    right: -12px; } }
+    right: -12px; }
+
+  select {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 75px;
+    margin-bottom: 15px;
+    font-size: 20px; } }
 @media screen and (min-width: 1280px) {
-  #formInscription {
-    margin-top: 100px; }
-    #formInscription .bouton {
-      height: 45px;
-      margin-bottom: 10px;
-      font-size: 20px; }
+  #formInscription .bouton {
+    height: 45px;
+    margin-bottom: 10px;
+    font-size: 20px; }
 
   label {
     font-size: 30px;
@@ -427,6 +418,13 @@ input {
     font-size: 60px;
     position: absolute;
     top: -17px;
-    right: -12px; } }
+    right: -12px; }
+
+  select {
+    border: 2px solid black !important;
+    border-radius: 5px !important;
+    width: 75px;
+    margin-bottom: 15px;
+    font-size: 25px; } }
 
 /*# sourceMappingURL=style.css.map */
