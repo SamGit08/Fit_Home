@@ -56,7 +56,7 @@
       <!-- fin de la condition -->
       <div class="col-xs-6 col-xs-offset-3">
         <!-- mettre le bouton en type submit -->
-        <button class="bouton" type="submit" name="submit">Inscription</button>
-        <?php inscription(); ?>
+        <button class="bouton" type="submit" name="submitInscription">Inscription</button>
+        <?php inscription($prenom, $nom, $email, $mdp, $mdpConf, $role); ?>
       </div>
     </form>
