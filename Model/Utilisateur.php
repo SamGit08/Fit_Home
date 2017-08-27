@@ -1,5 +1,6 @@
 <?php
   require 'Connexion.php';
+    
 
     function inscription($prenom, $nom, $email, $mdp, $mdpConf, $role)
     {
@@ -23,24 +24,19 @@
         }
       }
 
-      function connexion($email, $mdp)
+      function obtenirUtilisateur($email, $mdp)
       {
-        if(isset($_POST['submitConnexion'], $_POST['email'], $_POST['mdp'])){
+
           global $bdd;
 
           $email = $_POST['email'];
           $mdp = $_POST['mdp'];
 
-          $req = $bdd->prepare("SELECT mdp FROM Utilisateur WHERE email = '$email' AND mdp = '$mdp'");
+          $req = $bdd->prepare("SELECT * FROM Utilisateur WHERE email = '$email' AND mdp = '$mdp'");
+
           $req->execute();
+          $donnees = $req->fetch();
 
-          $connecter = $req->fetch();
+          return $donnees;
 
-            if($connecter){
-              session_start();
-              header("Location: ../Controller/index.php?page=../View/main.php");
-            }else{
-              echo "<div class='col-xs-12'><p>Email et/ou Mot de passe incorrect !</p></div>";
-          }
-        }
       }

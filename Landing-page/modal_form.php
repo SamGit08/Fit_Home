@@ -13,14 +13,19 @@
       <div class="col-xs-12">
         <input type="password" name="mdp" value="" placeholder="Mot de passe">
       </div>
-      <!-- fin de la condition -->
       <div class="col-xs-6 col-xs-offset-3">
         <button class="bouton" type="submit" name="submitConnexion">Connexion</button>
-        <?php connexion($email, $mdp); ?>
+        <?php
+          $donnees = obtenirUtilisateur();
+          if(isset($_POST['email'], $_POST['mdp']) && $donnees['email'] == $_POST['email'] && $donnees['mdp'] == $_POST['mdp']){
+              session_start();
+              header("Location: ../Controller/index.php?page=../View/main.php");
+          }else{
+            echo "<div class='col-xs-12'><p>Email et/ou Mot de passe incorrect !</p></div>";
+          }
+        ?>
       </div>
     </form>
-
-
 <!-- modal du formulaire d'inscription -->
     <form id="formInscription" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="index.php" method="post">
       <div class="col-xs-1 col-xs-offset-11">
