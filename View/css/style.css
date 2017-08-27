@@ -109,14 +109,15 @@ section {
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Oswald', sans-serif; }
+  font-family: 'Oswald', sans-serif;
+  background-color: #f09819; }
   section form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
     border: solid black 2px;
-    background-color: transparent;
+    background-color: white;
     border-radius: 5px;
     font-family: "Oswald", sans-serif;
     font-weight: bold; }
@@ -127,13 +128,16 @@ section {
     font-size: 2.5em;
     text-align: center;
     border: solid black 2px;
-    background-color: transparent;
+    background-color: white;
     border-radius: 5px;
     font-family: "Oswald", sans-serif;
     font-weight: bold; }
   section input {
     font-size: 1.5em;
-    margin: 0.5em 0; }
+    margin: 0.5em 0;
+    border: solid black 2px;
+    border-radius: 5px;
+    text-align: center; }
   section .bouton {
     border: solid black 2px;
     color: black;
