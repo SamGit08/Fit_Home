@@ -67,6 +67,19 @@
       <div class="col-xs-6 col-xs-offset-3">
         <!-- mettre le bouton en type submit -->
         <button class="bouton" type="submit" name="submitInscription">Inscription</button>
-        <?php inscription($prenom, $nom, $email, $mdp, $mdpConf, $role); ?>
+        <?php
+          $prenom = $_POST['prenom'];
+          $nom = $_POST['nom'];
+          $email = $_POST['email'];
+          $mdp = $_POST['mdp'];
+          $mdpConf = $_POST['mdpConf'];
+          $role = $_POST['coach'];
+
+          if(isset($_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['mdp'], $_POST['mdpConf'], $_POST['coach']) && $mdp == $mdpConf){
+            creerUtilisateur($prenom, $nom, $email, $mdp, $mdpConf, $role);
+          }else{
+            echo "<div class='col-xs-12'><p>Champs manquants / mot de passe incorrect !</p></div>";
+          }
+        ?>
       </div>
     </form>

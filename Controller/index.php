@@ -6,5 +6,6 @@ session_start();
   require '../View/header.php';
   $imc = calculImc();
   $donnees = obtenirUtilisateur();
+  creerUtilisateur();
   require $_GET['page'];
 ?>
