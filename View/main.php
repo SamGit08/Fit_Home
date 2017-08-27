@@ -1,7 +1,6 @@
 <section class="row">
-  <?php var_dump($donnees); ?>
   <h1 class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3"><?php
-    print strtoupper($donnees['email'])." ".strtoupper($donnees['mdp']); ?></h1>
+    print strtoupper($_SESSION['prenom'])." ".strtoupper($_SESSION['nom']); ?></h1>
   <form class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" action="../Controller/index.php?page=../View/main.php" method="post">
     <div class="col-xs-12">
       <input type="number" name="taille" value="" placeholder="Votre taille (en cm)">

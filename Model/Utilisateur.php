@@ -1,6 +1,6 @@
 <?php
   require 'Connexion.php';
-    
+
 
     function inscription($prenom, $nom, $email, $mdp, $mdpConf, $role)
     {

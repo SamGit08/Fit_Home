@@ -20,6 +20,8 @@
           if(isset($_POST['email'], $_POST['mdp']) && $donnees['email'] == $_POST['email'] && $donnees['mdp'] == $_POST['mdp']){
               session_start();
               header("Location: ../Controller/index.php?page=../View/main.php");
+              $_SESSION['nom'] = $donnees['nom'];
+              $_SESSION['prenom'] = $donnees['prenom'];
           }else{
             echo "<div class='col-xs-12'><p>Email et/ou Mot de passe incorrect !</p></div>";
           }
