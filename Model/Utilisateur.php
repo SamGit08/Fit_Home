@@ -1,7 +1,7 @@
 <?php
   require 'Connexion.php';
 
-
+    // fonction qui enregisre l'Utilisateur
     function inscription($prenom, $nom, $email, $mdp, $mdpConf, $role)
     {
 
@@ -24,13 +24,10 @@
         }
       }
 
+      // fonction qui recupère les données de l'Utilisateur
       function obtenirUtilisateur($email, $mdp)
       {
-
           global $bdd;
-
-          $email = $_POST['email'];
-          $mdp = $_POST['mdp'];
 
           $req = $bdd->prepare("SELECT * FROM Utilisateur WHERE email = '$email' AND mdp = '$mdp'");
 
@@ -38,5 +35,4 @@
           $donnees = $req->fetch();
 
           return $donnees;
-
       }

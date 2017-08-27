@@ -16,7 +16,11 @@
       <div class="col-xs-6 col-xs-offset-3">
         <button class="bouton" type="submit" name="submitConnexion">Connexion</button>
         <?php
-          $donnees = obtenirUtilisateur();
+          $email = $_POST['email'];
+          $mdp = $_POST['mdp'];
+
+          $donnees = obtenirUtilisateur($email, $mdp);
+
           if(isset($_POST['email'], $_POST['mdp']) && $donnees['email'] == $_POST['email'] && $donnees['mdp'] == $_POST['mdp']){
               session_start();
               header("Location: ../Controller/index.php?page=../View/main.php");
@@ -60,7 +64,6 @@
           <option value="1">Oui</option>
         </select>
       </div>
-      <!-- fin de la condition -->
       <div class="col-xs-6 col-xs-offset-3">
         <!-- mettre le bouton en type submit -->
         <button class="bouton" type="submit" name="submitInscription">Inscription</button>
