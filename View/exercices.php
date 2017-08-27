@@ -15,16 +15,12 @@
       <h2>IMC: <?php
       if(isset($imc)){
         print $imc." kg/m2";
-        $_SESSION['imc'] = $imc;
         if(($imc >= 18) && ($imc <= 25)){
           print '<p style="color: rgb(171, 255, 147)">Corpulence normale</p>';
-          $_SESSION['imc'] = $imc;
         }elseif($imc < 18){
             print '<p style="color: rgb(240, 152, 25)">Maigreur</p>';
-            $_SESSION['imc'] = $imc;
           }elseif($imc > 25){
             print '<p style="color: rgb(255, 115, 115)">Surpoids</p>';
-            $_SESSION['imc'] = $imc;
           }
         }
       ?></h2>

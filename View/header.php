@@ -19,7 +19,7 @@
           <a href="../Controller/index.php?page=../View/main.php"><span>Accueil</span></a>
         </div>
         <div class="contacts col-xs-12">
-          <a href="#"><span>Exercices</span></a>
+          <a href="../Controller/index.php?page=../View/exercices.php"><span>Exercices</span></a>
         </div>
         <div class="contacts col-xs-12">
           <a href="#"><span>Programmes</span></a>
@@ -35,7 +35,7 @@
           <a href="../Controller/index.php?main=../View/main.php"><span>Accueil</span></a>
         </div>
         <div class="contacts col-xs-12">
-          <a href="#"><span>Exercices</span></a>
+          <a href="../Controller/index.php?page=../View/exercices.php"><span>Exercices</span></a>
         </div>
         <div class="contacts col-xs-12">
           <a href="#"><span>Programmes</span></a>
