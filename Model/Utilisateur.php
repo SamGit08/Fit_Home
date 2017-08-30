@@ -1,7 +1,7 @@
 <?php
   require 'Connexion.php';
 
-    // fonction qui enregisre l'Utilisateur
+    // fonction qui enregisre les données de l'Utilisateur
     function creerUtilisateur($prenom, $nom, $email, $mdp, $mdpConf, $role)
     {
           global $bdd;
@@ -9,7 +9,7 @@
           $req = $bdd->prepare("INSERT INTO Utilisateur (nom, prenom, email, mdp, role) VALUES ('$nom', '$prenom', '$email', '$mdp', '$role')");
 
           $req->execute();
-      }
+    }
 
       // fonction qui recupère les données de l'Utilisateur
       function obtenirUtilisateur($email, $mdp)

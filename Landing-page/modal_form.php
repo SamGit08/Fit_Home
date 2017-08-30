@@ -1,6 +1,6 @@
-<?php require '../Model/Utilisateur.php'; ?>
+
 <!-- modal du formulaire de connexion -->
-    <form id="formConnexion" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="" method="post">
+    <form id="formConnexion" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="../Controller/formCtrl.php" method="post">
       <div class="col-xs-1 col-xs-offset-11">
         <button onclick="fermer();" class="close" type="button" name="button">&times;</button>
       </div>
@@ -8,7 +8,7 @@
         <label>Se connecter</label>
       </div>
       <div class="col-xs-12">
-        <input type="email" name="email" value="" placeholder="Email">
+        <input type="email" name="email" value="<?php if($email){echo $email;} ?>" placeholder="Email">
       </div>
       <div class="col-xs-12">
         <input type="password" name="mdp" value="" placeholder="Mot de passe">
@@ -16,24 +16,16 @@
       <div class="col-xs-6 col-xs-offset-3">
         <button class="bouton" type="submit" name="submitConnexion">Connexion</button>
         <?php
-          $email = $_POST['email'];
-          $mdp = $_POST['mdp'];
-
-          $donnees = obtenirUtilisateur($email, $mdp);
-
-          if(isset($_POST['email'], $_POST['mdp']) && $donnees['email'] == $_POST['email'] && $donnees['mdp'] == $_POST['mdp']){
-              session_start();
-              header("Location: ../Controller/index.php?page=../View/main.php");
-              $_SESSION['nom'] = $donnees['nom'];
-              $_SESSION['prenom'] = $donnees['prenom'];
-          }else{
-            echo "<div class='col-xs-12'><p>Email et/ou Mot de passe incorrect !</p></div>";
+          if($message != null) {
+        ?>
+          <p><?php echo $message; ?></p>
+        <?php
           }
         ?>
       </div>
     </form>
 <!-- modal du formulaire d'inscription -->
-    <form id="formInscription" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="index.php" method="post">
+    <form id="formInscription" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="../Controller/formCtrl.php" method="post">
       <div class="col-xs-1 col-xs-offset-11">
         <button onclick="fermer();" class="close" type="button" name="button">&times;</button>
       </div>
@@ -65,20 +57,12 @@
         </select>
       </div>
       <div class="col-xs-6 col-xs-offset-3">
-        <!-- mettre le bouton en type submit -->
         <button class="bouton" type="submit" name="submitInscription">Inscription</button>
         <?php
-          $prenom = $_POST['prenom'];
-          $nom = $_POST['nom'];
-          $email = $_POST['email'];
-          $mdp = $_POST['mdp'];
-          $mdpConf = $_POST['mdpConf'];
-          $role = $_POST['coach'];
-
-          if(isset($_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['mdp'], $_POST['mdpConf'], $_POST['coach']) && $mdp == $mdpConf){
-            creerUtilisateur($prenom, $nom, $email, $mdp, $mdpConf, $role);
-          }else{
-            echo "<div class='col-xs-12'><p>Champs manquants / mot de passe incorrect !</p></div>";
+          if($message != null) {
+        ?>
+          <p><?php echo $message; ?></p>
+        <?php
           }
         ?>
       </div>
