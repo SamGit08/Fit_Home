@@ -148,5 +148,14 @@ section {
     padding: 0.5em;
     margin: 0.5em 0;
     cursor: pointer; }
+  section .normal {
+    color: #abff93;
+    font-size: 2em; }
+  section .maigre {
+    color: #f09819;
+    font-size: 2em; }
+  section .surpoids {
+    color: #ff7373;
+    font-size: 2em; }
 
 /*# sourceMappingURL=style.css.map */

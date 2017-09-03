@@ -7,21 +7,100 @@
     <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Oswald" rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
     <title>Fit'Home - Vos séances à domicile</title>
   </head>
   <body>
+    <?php
+    if (!$is_connected)
+    {
+    ?>
     <div id="modal" class="container-fluid">
       <div class="row">
-        <?php
-          require 'modal_form.php';
-        ?>
+        <!-- modal du formulaire de connexion -->
+            <form id="formConnexion" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="index.php" method="post">
+              <div class="col-xs-1 col-xs-offset-11">
+                <button onclick="fermer();" class="close" type="button" name="button">&times;</button>
+              </div>
+              <div class="col-xs-6 col-xs-offset-3">
+                <label>Se connecter</label>
+              </div>
+              <div class="col-xs-12">
+                <input type="email" name="emailC" value="<?php if($email){echo $email;} ?>" placeholder="Email">
+              </div>
+              <div class="col-xs-12">
+                <input type="password" name="mdpC" value="" placeholder="Mot de passe">
+              </div>
+              <div class="col-xs-6 col-xs-offset-3">
+                <button class="bouton" type="submit" name="submitConnexion">Connexion</button>
+                <?php
+                  if($messageC != null) {
+                ?>
+                  <p><?php echo $messageC; ?></p>
+                <?php
+                  }
+                ?>
+              </div>
+            </form>
+        <!-- modal du formulaire d'inscription -->
+            <form id="formInscription" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="index.php" method="post">
+              <div class="col-xs-1 col-xs-offset-11">
+                <button onclick="fermer();" class="close" type="button" name="button">&times;</button>
+              </div>
+              <div class="col-xs-6 col-xs-offset-3">
+                <label>S'inscrire</label>
+              </div>
+              <div class="col-xs-12">
+                <input type="text" name="nom" value="" placeholder="Nom">
+              </div>
+              <div class="col-xs-12">
+                <input type="text" name="prenom" value="" placeholder="Prenom">
+              </div>
+              <div class="col-xs-12">
+                <input type="email" name="email" value="" placeholder="Email">
+              </div>
+              <div class="col-xs-12">
+                <input type="password" name="mdp" value="" placeholder="Mot de passe">
+              </div>
+              <div class="col-xs-12">
+                <input type="password" name="mdpConf" value="" placeholder="Confirmation mot de passe">
+              </div>
+              <div class="col-xs-5 col-sm-4 col-sm-offset-2">
+                <label>Coach ?</label>
+              </div>
+              <div class="col-xs-6 col-xs-offset-1 col-sm-3">
+                <select class="" name="coach">
+                  <option value="0">Non</option>
+                  <option value="1">Oui</option>
+                </select>
+              </div>
+              <div class="col-xs-6 col-xs-offset-3">
+                <button class="bouton" type="submit" name="submitInscription">Inscription</button>
+                <?php
+                  if($messageI!= null) {
+                ?>
+                  <p><?php echo $messageI; ?></p>
+                <?php
+                  }
+                ?>
+              </div>
+            </form>
       </div>
     </div>
+    <?php
+    }
+    ?>
     <section>
       <header>
         <img class="logo" src="images/weights.png" alt="">
+        <?php
+        if (!$is_connected)
+        {
+        ?>
         <button id="connexion" onclick='connexion();' class="bouton" type="button" name="button">Se connecter</button>
+        <?php
+        }
+        ?>
       </header>
       <div>
         <h1>Fit'Home</h1>
@@ -29,7 +108,14 @@
           <p>La salle de fitness chez vous !</p>
           <span>100% gratuit !</span>
         </div>
+        <?php
+        if (!$is_connected)
+        {
+        ?>
         <button id="inscription" onclick="inscription();" class="bouton" type="button" name="button">S'inscrire</button>
+        <?php
+        }
+        ?>
       </div>
     </section>
     <main class="container-fluid">

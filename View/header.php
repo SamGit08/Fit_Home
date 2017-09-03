@@ -16,10 +16,10 @@
       <!-- menu navbar horizontal pour tablettes et ordinateurs -->
       <nav id='menu'>
         <div class="contacts col-xs-12">
-          <a href="../Controller/index.php?page=../View/main.php"><span>Accueil</span></a>
+          <a href="../Controller/membreCtrl.php?page=../View/main.php"><span>Accueil</span></a>
         </div>
         <div class="contacts col-xs-12">
-          <a href="../Controller/index.php?page=../View/exercices.php"><span>Exercices</span></a>
+          <a href="../Controller/membreCtrl.php?page=../View/exercices.php"><span>Exercices</span></a>
         </div>
         <div class="contacts col-xs-12">
           <a href="#"><span>Programmes</span></a>
@@ -28,14 +28,14 @@
           <a href="#"><span>Progression</span></a>
         </div>
       </nav>
-      <a href="../Landing-page/index.php"><button class="bouton" type="button" name="button">Déconnexion</button></a>
+      <a href="../public/index.php"><button class="bouton" type="button" name="button">Déconnexion</button></a>
       <!-- menu burger pour mobiles -->
       <nav id='burger'>
         <div class="contacts col-xs-12">
-          <a href="../Controller/index.php?main=../View/main.php"><span>Accueil</span></a>
+          <a href="../Controller/membreCtrl.php?main=../View/main.php"><span>Accueil</span></a>
         </div>
         <div class="contacts col-xs-12">
-          <a href="../Controller/index.php?page=../View/exercices.php"><span>Exercices</span></a>
+          <a href="../Controller/membreCtrl.php?page=../View/exercices.php"><span>Exercices</span></a>
         </div>
         <div class="contacts col-xs-12">
           <a href="#"><span>Programmes</span></a>

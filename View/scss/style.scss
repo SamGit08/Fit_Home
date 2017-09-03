@@ -186,6 +186,18 @@ section{
     margin: 0.5em 0;
     cursor: pointer;
   }
+  .normal{
+    color: rgb(171, 255, 147);
+    font-size: 2em;
+  }
+  .maigre{
+    color: rgb(240, 152, 25);
+    font-size: 2em;
+  }
+  .surpoids{
+    color: rgb(255, 115, 115);
+    font-size: 2em;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {

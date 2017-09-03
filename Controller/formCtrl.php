@@ -1,27 +1,29 @@
 <?php
 require '../Model/Utilisateur.php';
 
+session_start();
+
 $prenom = null;
 $nom = null;
 $role = null;
-$message = null;
+$messageC = null;
+$messageI = null;
 $email = null;
 $mdp = null;
+$is_connected = false;
 
-if(isset($_POST['email'], $_POST['mdp'])) {
-  $email = $_POST['email'];
-  $mdp = $_POST['mdp'];
+if(isset($_POST['emailC'], $_POST['mdpC'])) {
+  $email = $_POST['emailC'];
+  $mdp = $_POST['mdpC'];
 
   $donnees = obtenirUtilisateur($email, $mdp);
 
-  if($donnees['email'] == $_POST['email'] && $donnees['mdp'] == $_POST['mdp']){
-      session_start();
-      header("Location: index.php?page=../View/main.php");
+  if($donnees['email'] == $_POST['emailC'] && $donnees['mdp'] == $_POST['mdpC']){
       $_SESSION['nom'] = $donnees['nom'];
       $_SESSION['prenom'] = $donnees['prenom'];
+      header("Location:../Controller/membreCtrl.php?page=../View/main.php");
   }else{
-    header("Location:../Landing-page/index.php");
-    $message = "Email et/ou Mot de passe incorrect !";
+    $messageC = "Email et/ou Mot de passe incorrect !";
   }
 }
 
@@ -39,10 +41,13 @@ if(isset($_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['mdp'], $_POST
 
     creerUtilisateur($prenom, $nom, $email, $mdp, $mdpConf, $role);
 
-    header("Location:../Landing-page/index.php");
   }else{
-    header("Location:../Landing-page/index.php");
-    $message = "Champs manquants / mot de passe incorrect !";
+    $messageI = "Champs manquants / mot de passe incorrect !";
   }
 }
-?>
+
+if(isset($_SESSION['nom'], $_SESSION['prenom'])) {
+  $is_connected = true;
+}
+
+require '../View/landingPage.php';
