@@ -32,7 +32,7 @@
       <!-- menu burger pour mobiles -->
       <nav id='burger'>
         <div class="contacts col-xs-12">
-          <a href="../Controller/membreCtrl.php?main=../View/main.php"><span>Accueil</span></a>
+          <a href="../Controller/membreCtrl.php?page=../View/main.php"><span>Accueil</span></a>
         </div>
         <div class="contacts col-xs-12">
           <a href="../Controller/membreCtrl.php?page=../View/exercices.php"><span>Exercices</span></a>

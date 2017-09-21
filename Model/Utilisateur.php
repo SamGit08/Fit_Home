@@ -23,7 +23,17 @@
 
           return $donnees;
       }
-      
+
+      // fonction qui enregisre les données pourla création d'un  exercice
+      function creerExercice()
+      {
+            global $bdd;
+
+            $req = $bdd->prepare("INSERT INTO Exercice (nomExercice, details, video) VALUES ('$nomExercice', '$details', '$video')");
+
+            $req->execute();
+      }
+
       //fonction qui récupère les videos d'exercices dans la base de données
       function obtenirExercices()
       {
