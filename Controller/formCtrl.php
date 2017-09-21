@@ -19,9 +19,9 @@ if(isset($_POST['emailC'], $_POST['mdpC'])) {
   $donnees = obtenirUtilisateur($email, $mdp);
 
   if($donnees['email'] == $_POST['emailC'] && $donnees['mdp'] == $_POST['mdpC']){
-      $_SESSION['nom'] = $donnees['nom'];
-      $_SESSION['prenom'] = $donnees['prenom'];
-      header("Location:../Controller/membreCtrl.php?page=../View/main.php");
+    $nom = $donnees['nom'];
+    $prenom = $donnees['prenom'];
+    header("Location:../Controller/membreCtrl.php?page=../View/main.php");
   }else{
     $messageC = "Email et/ou Mot de passe incorrect !";
   }

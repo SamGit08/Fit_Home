@@ -23,3 +23,16 @@
 
           return $donnees;
       }
+      
+      //fonction qui récupère les videos d'exercices dans la base de données
+      function obtenirExercices()
+      {
+          global $bdd;
+
+          $req = $bdd->prepare("SELECT * FROM Exercice");
+
+          $req->execute();
+          $exercices = $req->fetchAll();
+
+          return $exercices;
+      }

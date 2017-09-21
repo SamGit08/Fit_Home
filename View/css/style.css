@@ -104,13 +104,81 @@ body {
   flex-direction: column;
   min-height: 100vh; }
 
-section {
+#accueil {
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: center;
   font-family: 'Oswald', sans-serif;
   background-color: #f09819; }
+  #accueil form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    border: solid black 2px;
+    background-color: white;
+    border-radius: 5px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold; }
+    #accueil form div:nth-child(2n+1) h2 {
+      font-size: 2em;
+      font-weight: bold; }
+  #accueil h1 {
+    font-size: 2.5em;
+    text-align: center;
+    border: solid black 2px;
+    background-color: white;
+    border-radius: 5px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold; }
+  #accueil input {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    border: solid black 2px;
+    border-radius: 5px;
+    text-align: center; }
+  #accueil .bouton {
+    border: solid black 2px;
+    color: black;
+    background-color: transparent;
+    border-radius: 5px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    cursor: pointer; }
+  #accueil .normal {
+    color: #abff93;
+    font-size: 2em; }
+  #accueil .maigre {
+    color: #f09819;
+    font-size: 2em; }
+  #accueil .surpoids {
+    color: #ff7373;
+    font-size: 2em; }
+
+section {
+  font-family: 'Oswald', sans-serif;
+  background-color: #f09819; }
+  section .video {
+    margin: 1em 0; }
+  section h1 {
+    font-size: 2.5em;
+    text-align: center;
+    border: solid black 2px;
+    background-color: white;
+    border-radius: 5px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold; }
+  section h2 {
+    font-size: 1.5em;
+    text-align: center;
+    border: solid black 2px;
+    background-color: white;
+    border-radius: 5px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold; }
   section form {
     display: flex;
     flex-direction: column;
@@ -121,41 +189,20 @@ section {
     border-radius: 5px;
     font-family: "Oswald", sans-serif;
     font-weight: bold; }
-    section form div:nth-child(2n+1) h2 {
-      font-size: 2em;
-      font-weight: bold; }
-  section h1 {
-    font-size: 2.5em;
-    text-align: center;
-    border: solid black 2px;
-    background-color: white;
-    border-radius: 5px;
-    font-family: "Oswald", sans-serif;
-    font-weight: bold; }
-  section input {
-    font-size: 1.5em;
-    margin: 0.5em 0;
-    border: solid black 2px;
-    border-radius: 5px;
-    text-align: center; }
   section .bouton {
     border: solid black 2px;
     color: black;
-    background-color: transparent;
     border-radius: 5px;
     font-family: "Oswald", sans-serif;
     font-weight: bold;
     padding: 0.5em;
-    margin: 0.5em 0;
+    margin: 0.5em 0em;
     cursor: pointer; }
-  section .normal {
-    color: #abff93;
-    font-size: 2em; }
-  section .maigre {
-    color: #f09819;
-    font-size: 2em; }
-  section .surpoids {
-    color: #ff7373;
-    font-size: 2em; }
+  section .ajout {
+    background-color: #abff93; }
+  section .modif {
+    background-color: #404040; }
+  section .suppr {
+    background-color: #ff7373; }
 
 /*# sourceMappingURL=style.css.map */

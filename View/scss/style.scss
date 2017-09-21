@@ -135,7 +135,7 @@ body{
   flex-direction: column;
   min-height: 100vh;
 }
-section{
+#accueil{
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -199,7 +199,61 @@ section{
     font-size: 2em;
   }
 }
-
+section{
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(240, 152, 25);
+    .video{
+      margin: 1em 0;
+    }
+    h1{
+      font-size: 2.5em;
+      text-align: center;
+      border: solid black 2px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 5px;
+      font-family: "Oswald", sans-serif;
+      font-weight: bold;
+    }
+    h2{
+      font-size: 1.5em;
+      text-align: center;
+      border: solid black 2px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 5px;
+      font-family: "Oswald", sans-serif;
+      font-weight: bold;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      border: solid black 2px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 5px;
+      font-family: "Oswald", sans-serif;
+      font-weight: bold;
+    }
+    .bouton{
+      border: solid black 2px;
+      color: black;
+      border-radius: 5px;
+      font-family: "Oswald", sans-serif;
+      font-weight: bold;
+      padding: 0.5em;
+      margin: 0.5em 0em;
+      cursor: pointer;
+    }
+    .ajout{
+      background-color: rgb(171, 255, 147);
+    }
+    .modif{
+      background-color: #404040;
+    }
+    .suppr{
+      background-color: rgb(255, 115, 115);
+    }
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
 }

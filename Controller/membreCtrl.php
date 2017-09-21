@@ -25,5 +25,9 @@ session_start();
   $_SESSION['prenom'] = $donnees['prenom'];
 
   creerUtilisateur();
+
+  // $exercices = obtenirVideos();
+  // obtenirExercices();
+
   require $_GET['page'];
 ?>
