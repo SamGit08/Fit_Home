@@ -204,5 +204,7 @@ section {
     background-color: #404040; }
   section .suppr {
     background-color: #ff7373; }
+  section #formExo input {
+    margin-top: 0.5em; }
 
 /*# sourceMappingURL=style.css.map */

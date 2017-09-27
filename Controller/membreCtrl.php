@@ -4,6 +4,7 @@ session_start();
   require '../Model/calculImc.php';
   require '../Model/Utilisateur.php';
   require '../View/header.php';
+
   $imc = calculImc();
 
   if(isset($imc)){
@@ -20,14 +21,10 @@ session_start();
     }
 
   $donnees = obtenirUtilisateur($email, $mdp);
+  
+  $exercices = obtenirExercices($nomExercice, $video);
 
-  $_SESSION['nom'] = $donnees['nom'];
-  $_SESSION['prenom'] = $donnees['prenom'];
 
-  creerUtilisateur();
-
-  // $exercices = obtenirVideos();
-  // obtenirExercices();
 
   require $_GET['page'];
 ?>

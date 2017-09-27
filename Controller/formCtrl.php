@@ -19,8 +19,8 @@ if(isset($_POST['emailC'], $_POST['mdpC'])) {
   $donnees = obtenirUtilisateur($email, $mdp);
 
   if($donnees['email'] == $_POST['emailC'] && $donnees['mdp'] == $_POST['mdpC']){
-    $nom = $donnees['nom'];
-    $prenom = $donnees['prenom'];
+    $_SESSION['nom'] = $donnees['nom'];
+    $_SESSION['prenom'] = $donnees['prenom'];
     header("Location:../Controller/membreCtrl.php?page=../View/main.php");
   }else{
     $messageC = "Email et/ou Mot de passe incorrect !";
@@ -48,6 +48,19 @@ if(isset($_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['mdp'], $_POST
 
 if(isset($_SESSION['nom'], $_SESSION['prenom'])) {
   $is_connected = true;
+}
+
+$erreur = null;
+$nomExercice = null;
+$video = null;
+
+if(isset($_POST['nomExercice'],$_POST['video'])){
+  $nomExercice = $_POST['nomExercice'];
+  $video = $_POST['video'];
+  creerExercice($nomExercice, $video);
+  header("Location:../Controller/membreCtrl.php?page=../View/exercices.php");
+}else{
+  $erreur = "Erreur de création !";
 }
 
 require '../View/landingPage.php';

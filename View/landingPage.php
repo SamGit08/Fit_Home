@@ -7,7 +7,7 @@
     <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Oswald" rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../Public/css/style.css">
     <title>Fit'Home - Vos séances à domicile</title>
   </head>
   <body>
@@ -221,5 +221,5 @@
       </div>
     </footer>
   </body>
-  <script src="js/app.js" type="text/javascript"></script>
+  <script src="../Js/modalFormulaire.js" type="text/javascript"></script>
 </html>

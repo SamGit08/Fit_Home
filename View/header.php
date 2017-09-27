@@ -28,7 +28,7 @@
           <a href="#"><span>Progression</span></a>
         </div>
       </nav>
-      <a href="../public/index.php"><button class="bouton" type="button" name="button">Déconnexion</button></a>
+      <a href="../Public/index.php"><button class="bouton" type="button" name="button">Déconnexion</button></a>
       <!-- menu burger pour mobiles -->
       <nav id='burger'>
         <div class="contacts col-xs-12">

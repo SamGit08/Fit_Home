@@ -25,17 +25,17 @@
       }
 
       // fonction qui enregisre les données pourla création d'un  exercice
-      function creerExercice()
+      function creerExercice($nomExercice, $video)
       {
-            global $bdd;
+          global $bdd;
 
-            $req = $bdd->prepare("INSERT INTO Exercice (nomExercice, details, video) VALUES ('$nomExercice', '$details', '$video')");
+          $req = $bdd->prepare("INSERT INTO Exercice (nomExercice, video) VALUES ('$nomExercice', '$video')");
 
-            $req->execute();
+          $req->execute();
       }
 
       //fonction qui récupère les videos d'exercices dans la base de données
-      function obtenirExercices()
+      function obtenirExercices($nomExercice, $video)
       {
           global $bdd;
 
