@@ -1,7 +1,7 @@
 <?php
-require '../Model/Utilisateur.php';
-
 session_start();
+require '../Model/Connexion.php';
+require '../Model/Utilisateur.php';
 
 $prenom = null;
 $nom = null;
@@ -47,6 +47,8 @@ if(isset($_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['mdp'], $_POST
 }
 
 if(isset($_SESSION['nom'], $_SESSION['prenom'])) {
+  $nom = $_SESSION['nom'];
+  $prenom = $_SESSION['prenom'];
   $is_connected = true;
 }
 
@@ -55,12 +57,28 @@ $nomExercice = null;
 $video = null;
 
 if(isset($_POST['nomExercice'],$_POST['video'])){
+
   $nomExercice = $_POST['nomExercice'];
   $video = $_POST['video'];
-  creerExercice($nomExercice, $video);
-  header("Location:../Controller/membreCtrl.php?page=../View/exercices.php");
-}else{
-  $erreur = "Erreur de création !";
+
+  if($nomExercice != null && $video != null){
+    creerExercice($nomExercice, $video);
+    header("Location:../Controller/membreCtrl.php?page=../View/exercices.php");
+  }else{
+    $erreur = "Erreur de création !";
+    header("Location:../Controller/membreCtrl.php?page=../View/exercices.php");
+  }
+}
+
+if(isset($_POST['exerciceSuppr'])){
+  $nomExercice = $_POST['exerciceSuppr'];
+  if($nomExercice != null){
+    supprimerExercice($nomExercice);
+    header("Location:../Controller/membreCtrl.php?page=../View/exercices.php");
+  }else{
+    $erreurSuppr = "erreur de suppression";
+    header("Location:../Controller/membreCtrl.php?page=../View/exercices.php");
+  }
 }
 
 require '../View/landingPage.php';

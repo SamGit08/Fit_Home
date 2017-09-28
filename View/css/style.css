@@ -179,6 +179,15 @@ section {
     border-radius: 5px;
     font-family: "Oswald", sans-serif;
     font-weight: bold; }
+  section input {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0.5em 0;
+    border: solid black 2px;
+    background-color: white;
+    border-radius: 5px;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold; }
   section form {
     display: flex;
     flex-direction: column;
@@ -206,5 +215,16 @@ section {
     background-color: #ff7373; }
   section #formExo input {
     margin-top: 0.5em; }
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  border: solid black 2px;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

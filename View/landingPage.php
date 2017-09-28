@@ -18,7 +18,7 @@
     <div id="modal" class="container-fluid">
       <div class="row">
         <!-- modal du formulaire de connexion -->
-            <form id="formConnexion" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="index.php" method="post">
+            <form id="formConnexion" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="../Public/index.php" method="post">
               <div class="col-xs-1 col-xs-offset-11">
                 <button onclick="fermer();" class="close" type="button" name="button">&times;</button>
               </div>
@@ -26,7 +26,7 @@
                 <label>Se connecter</label>
               </div>
               <div class="col-xs-12">
-                <input type="email" name="emailC" value="<?php if($email){echo $email;} ?>" placeholder="Email">
+                <input type="email" name="emailC" value="" placeholder="Email">
               </div>
               <div class="col-xs-12">
                 <input type="password" name="mdpC" value="" placeholder="Mot de passe">
@@ -43,7 +43,7 @@
               </div>
             </form>
         <!-- modal du formulaire d'inscription -->
-            <form id="formInscription" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="index.php" method="post">
+            <form id="formInscription" class="formulaire col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" action="../Public/index.php" method="post">
               <div class="col-xs-1 col-xs-offset-11">
                 <button onclick="fermer();" class="close" type="button" name="button">&times;</button>
               </div>

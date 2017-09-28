@@ -21,9 +21,10 @@ session_start();
     }
 
   $donnees = obtenirUtilisateur($email, $mdp);
-  
+  $nom = $_SESSION['nom'];
+  $prenom = $_SESSION['prenom'];
   $exercices = obtenirExercices($nomExercice, $video);
-
+  supprimerExercice($nomExercice);
 
 
   require $_GET['page'];

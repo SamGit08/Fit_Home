@@ -2,7 +2,7 @@
   <section id="accueil" class="row">
     <h1 class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3"><?php
       print strtoupper($prenom)." ".strtoupper($nom); ?></h1>
-    <form class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" action="../Controller/formCtrl.php?page=../View/main.php" method="post">
+    <form class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" action="../Controller/membreCtrl.php?page=../View/main.php" method="post">
       <div class="col-xs-12">
         <input type="number" name="taille" value="" placeholder="Votre taille (en cm)">
       </div>

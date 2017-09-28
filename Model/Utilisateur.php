@@ -46,3 +46,12 @@
 
           return $exercices;
       }
+
+      function supprimerExercice($nomExercice)
+      {
+        global $bdd;
+
+        $req = $bdd->prepare("DELETE FROM Exercice WHERE nomExercice = '$nomExercice'");
+
+        $req->execute();
+      }
