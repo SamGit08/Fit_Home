@@ -13,7 +13,9 @@ header{
     }
   }
 }
-
+div{
+  text-align: center;
+}
 .menuBurger{
   width: 2.5em;
   height: 2.5em;
@@ -134,6 +136,7 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: rgb(240, 152, 25);
 }
 #accueil{
   display: flex;
@@ -201,7 +204,7 @@ body{
 }
 section{
     font-family: 'Oswald', sans-serif;
-    background-color: rgb(240, 152, 25);
+    // background-color: rgb(240, 152, 25);
     .video{
       margin: 1em 0;
     }

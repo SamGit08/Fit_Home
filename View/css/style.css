@@ -9,6 +9,9 @@ header {
   header .bouton a:link, header .bouton a:visited {
     text-decoration: none; }
 
+div {
+  text-align: center; }
+
 .menuBurger {
   width: 2.5em;
   height: 2.5em; }
@@ -102,7 +105,8 @@ body {
   padding: 0 !important;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-color: #f09819; }
 
 #accueil {
   display: flex;
@@ -159,8 +163,7 @@ body {
     font-size: 2em; }
 
 section {
-  font-family: 'Oswald', sans-serif;
-  background-color: #f09819; }
+  font-family: 'Oswald', sans-serif; }
   section .video {
     margin: 1em 0; }
   section h1 {
