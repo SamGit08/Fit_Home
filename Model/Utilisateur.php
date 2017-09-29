@@ -47,6 +47,32 @@
           return $exercices;
       }
 
+      //fonctions qui met à jour les infos d'un exercice
+      function modifierExercice($nomExercice, $nouvelExercice, $video){
+        global $bdd;
+
+        $req = $bdd->prepare("UPDATE Exercice SET nomExercice = '$nouvelExercice', video = '$video' WHERE nomExercice = '$nomExercice'");
+
+        $req->execute();
+      }
+
+      function modifierNom($nomExercice, $nouvelExercice){
+        global $bdd;
+
+        $req = $bdd->prepare("UPDATE Exercice SET nomExercice = '$nouvelExercice' WHERE nomExercice = '$nomExercice'");
+
+        $req->execute();
+      }
+
+      function modifierVideo($video, $nomExercice){
+        global $bdd;
+
+        $req = $bdd->prepare("UPDATE Exercice SET video = '$video' WHERE nomExercice = '$nomExercice'");
+
+        $req->execute();
+      }
+
+      // fonction qui supprime un exercice
       function supprimerExercice($nomExercice)
       {
         global $bdd;

@@ -24,9 +24,6 @@
         <div class="contacts col-xs-12">
           <a href="#"><span>Programmes</span></a>
         </div>
-        <div class="contacts col-xs-12">
-          <a href="#"><span>Progression</span></a>
-        </div>
       </nav>
       <a href="../Public/index.php"><button class="bouton" type="button" name="button">Déconnexion</button></a>
       <!-- menu burger pour mobiles -->
@@ -39,9 +36,6 @@
         </div>
         <div class="contacts col-xs-12">
           <a href="#"><span>Programmes</span></a>
-        </div>
-        <div class="contacts col-xs-12">
-          <a href="#"><span>Progression</span></a>
         </div>
       </nav>
     </header>

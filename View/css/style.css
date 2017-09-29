@@ -215,6 +215,8 @@ section {
     background-color: #ff7373; }
   section #formExo input {
     margin-top: 0.5em; }
+  section object {
+    margin-bottom: 1.5em; }
 
 #form {
   display: flex;

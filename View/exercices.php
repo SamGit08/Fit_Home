@@ -6,13 +6,10 @@
       <?php $video = substr($exercice['video'], 32); ?>
       <h2><?php echo strtoupper($exercice['nomExercice']);?></h2>
       <object class="col-xs-12 " height="320" data=https://www.youtube.com/embed/<?php echo $video; ?>></object>
-      <div class="">
-        <button class="col-xs-4 col-md-4 bouton ajout" type="button" name="button">Ajouter</button>
-        <button class="col-xs-4 col-md-4 bouton modif" type="button" name="button">Modifier</button>
-      </div>
     </div>
     <p><?php echo $erreurSuppr; ?></p>
   <?php endforeach ?>
+  <!-- formulaire de creation d'exercices -->
   <form id="formExo" class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" action="../Controller/formCtrl.php" method="post">
     <div class="col-xs-12">
       <input class="col-xs-10 col-xs-offset-1" type="text" name="nomExercice" value="" placeholder="Nom de la video">
@@ -26,6 +23,24 @@
     </div>
     <p> <?php print $erreur; ?></p>
   </form>
+  <!-- formulaire de modification d'exercices -->
+  <form id="modifExo" class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" action="../Controller/formCtrl.php" method="post">
+    <div class="col-xs-12">
+      <input class="col-xs-10 col-xs-offset-1" type="text" name="nomActuel" value="" placeholder="Nom de la video à modifier">
+    </div>
+    <div class="col-xs-12">
+      <input class="col-xs-10 col-xs-offset-1" type="text" name="nouveauNom" value="" placeholder="Nouveau nom de la video">
+    </div>
+    <div class="col-xs-12">
+      <input class="col-xs-10 col-xs-offset-1" type="text" name="lienModif" value="" placeholder="Lien de la video">
+    </div>
+    <div class="col-xs-12">
+      <button class="bouton" type="submit" name="button">Soumettre</button>
+      <button class="bouton" onclick="hideModif();" type="button" name="button">Annuler</button>
+    </div>
+    <p> <?php print $erreur; ?></p>
+  </form>
+  <!-- formulaire de suppression d'exercices -->
   <form id="supprExo" class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" action="../Controller/formCtrl.php" method="post">
     <div class="col-xs-12">
       <input class="col-xs-10 col-xs-offset-1" type="text" name="exerciceSuppr" value="" placeholder="Nom de la video à supprimer">
@@ -36,12 +51,16 @@
     </div>
     <p> <?php print $erreur; ?></p>
   </form>
-  <div class="col-xs-12">
-    <div class="col-xs-6 col-xs-offset-3 col-md-2 col-md-offset-4">
-      <button class="bouton ajout" onclick="showExo();" type="button" name="button">Créer un exercice</button>
+  <!-- boutons d'ouverture des formulaires -->
+  <div class="col-xs-12 col-md-offset-2 col-md-8">
+    <div class="col-md-4">
+      <button class="bouton ajout" onclick="showExo();" type="button" name="button">Ajouter un exercice</button>
     </div>
-    <div class="col-xs-6 col-xs-offset-3 col-md-3 col-md-offset-0">
-      <button class="bouton suppr" onclick="showSuppr();" type="button" name="submitSuppr">Supprimer un exercice</button>
+    <div class="col-md-4">
+      <button class="bouton modif" onclick="showModif();" type="button" name="button">Modifier un exercice</button>
+    </div>
+    <div class="col-md-4">
+      <button class="bouton suppr" onclick="showSuppr();" type="button" name="button">Supprimer un exercice</button>
     </div>
   </div>
   </section>

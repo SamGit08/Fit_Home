@@ -1,6 +1,7 @@
 $(window).ready(function() {
   $("#formExo").hide();
   $("#supprExo").hide();
+  $("#modifExo").hide();
 });
 
 function showExo(){
@@ -17,4 +18,12 @@ function showSuppr(){
 
 function hideSuppr(){
   $("#supprExo").hide('slow');
+}
+
+function showModif(){
+  $("#modifExo").show('slow');
+}
+
+function hideModif(){
+  $("#modifExo").hide('slow');
 }

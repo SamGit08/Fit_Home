@@ -81,4 +81,27 @@ if(isset($_POST['exerciceSuppr'])){
   }
 }
 
+if(isset($_POST['nomActuel'], $_POST['nouveauNom'], $_POST['lienModif'])){
+  $nomExercice = $_POST['nomActuel'];
+  $nouvelExercice = $_POST['nouveauNom'];
+  $video = $_POST['lienModif'];
+  if($nomExercice != null && $nouvelExercice != null && $video != null){
+    modifierExercice($nomExercice, $nouvelExercice, $video);
+    header("Location:../Controller/membreCtrl.php?page=../View/exercices.php");
+  }elseif($nouvelExercice == null && $nomExercice != null && $video != null){
+    $nomExercice = $_POST['nomActuel'];
+    $video = $_POST['lienModif'];
+    modifierVideo($video, $nomExercice);
+    header("Location:../Controller/membreCtrl.php?page=../View/exercices.php");
+  }elseif($video == null && $nouvelExercice != null && $nomExercice != null){
+    $nouvelExercice = $_POST['nouveauNom'];
+    $nomExercice = $_POST['nomActuel'];
+    modifierNom($nomExercice, $nouvelExercice);
+    header("Location:../Controller/membreCtrl.php?page=../View/exercices.php");
+  }else{
+    header("Location:../Controller/membreCtrl.php?page=../View/exercices.php");
+  }
+}
+
+
 require '../View/landingPage.php';
